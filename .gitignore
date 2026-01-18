@@ -5,6 +5,11 @@
 /.pnp
 .pnp.js
 
+# video files (too large for GitHub)
+public/videos/*.mp4
+public/videos/*.webm
+public/videos/*.mov
+
 # testing
 /coverage
 
