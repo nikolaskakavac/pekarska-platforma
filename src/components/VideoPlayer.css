@@ -1,0 +1,203 @@
+.video-player {
+  position: relative;
+  background: #000;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 1px rgba(249, 115, 22, 0.3);
+  border: 1px solid rgba(249, 115, 22, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.video-player:hover {
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.7), 0 0 2px rgba(249, 115, 22, 0.4);
+}
+
+.video-element {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+.video-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 100%);
+  color: white;
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.control-btn {
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(251, 146, 60, 0.2) 100%);
+  border: 1px solid rgba(249, 115, 22, 0.3);
+  color: white;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.btn-icon {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.control-btn:hover {
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.4) 0%, rgba(251, 146, 60, 0.4) 100%);
+  border-color: rgba(249, 115, 22, 0.6);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.control-btn:active {
+  transform: scale(0.95);
+}
+
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  cursor: pointer;
+  accent-color: #f97316;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to right, rgba(249, 115, 22, 0.5) 0%, rgba(249, 115, 22, 0.5) 100%);
+}
+
+.progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(135deg, #f97316, #fb923c);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(249, 115, 22, 0.5);
+  transition: all 0.2s ease;
+}
+
+.progress-bar::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 15px rgba(249, 115, 22, 0.8);
+  transform: scale(1.2);
+}
+
+.progress-bar::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(135deg, #f97316, #fb923c);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(249, 115, 22, 0.5);
+  transition: all 0.2s ease;
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.volume-icon {
+  font-size: 18px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.volume-bar {
+  width: 80px;
+  height: 6px;
+  cursor: pointer;
+  accent-color: #f97316;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.volume-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(135deg, #f97316, #fb923c);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(249, 115, 22, 0.5);
+}
+
+.volume-bar::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(135deg, #f97316, #fb923c);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(249, 115, 22, 0.5);
+}
+
+@media (max-width: 1024px) {
+  .video-player {
+    border-radius: 16px;
+  }
+  
+  .video-controls {
+    gap: 10px;
+    padding: 14px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .volume-control {
+    display: none;
+  }
+  
+  .video-player {
+    border-radius: 12px;
+  }
+  
+  .video-controls {
+    gap: 8px;
+    padding: 12px 12px;
+  }
+  
+  .control-btn {
+    padding: 6px 10px;
+    min-width: 36px;
+    min-height: 36px;
+  }
+  
+  .btn-icon {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-player {
+    border-radius: 10px;
+  }
+  
+  .video-controls {
+    gap: 6px;
+    padding: 10px 8px;
+  }
+  
+  .control-btn {
+    padding: 5px 8px;
+    min-width: 32px;
+    min-height: 32px;
+  }
+  
+  .btn-icon {
+    font-size: 14px;
+  }
+}
