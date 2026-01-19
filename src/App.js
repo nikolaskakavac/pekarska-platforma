@@ -93,6 +93,7 @@ function App() {
           courses={accessibleCourses}
           currentVideo={currentVideo}
           onVideoSelect={handleVideoSelect}
+          currentPlan={currentPlan}
         />
       </div>
 
