@@ -1,0 +1,8 @@
+﻿At line:2 char:1
++ @
++ ~
+Unrecognized token in source text.
+    + CategoryInfo          : ParserError: (:) [], ParentContai 
+   nsErrorRecordException
+    + FullyQualifiedErrorId : UnrecognizedToken
+ 
