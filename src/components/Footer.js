@@ -21,21 +21,21 @@ function Footer() {
         <div className="footer-section">
           <h3>🎓 Kursevi</h3>
           <ul className="footer-links">
-            <li><a href="#beli-hleb">Klasični Beli Hleb</a></li>
-            <li><a href="#kiflice-sir">Kiflice sa Sirom</a></li>
-            <li><a href="#pogaca">Srpska Pogača</a></li>
-            <li><a href="#cokolada">Čokoladne Kiflice</a></li>
-            <li><a href="#baklava">Medena Baklava</a></li>
+            <li><a href="/pekarska-platforma#video-1">Klasični Beli Hleb</a></li>
+            <li><a href="/pekarska-platforma#video-2">Kiflice sa Sirom</a></li>
+            <li><a href="/pekarska-platforma#video-3">Srpska Pogača</a></li>
+            <li><a href="/pekarska-platforma#video-4">Čokoladne Kiflice</a></li>
+            <li><a href="/pekarska-platforma#video-5">Medena Baklava</a></li>
           </ul>
         </div>
 
         <div className="footer-section">
           <h3>📚 Resursi</h3>
           <ul className="footer-links">
-            <li><a href="#recepti">Recepti sa Detaljima</a></li>
-            <li><a href="#konvertori">Konvertori Mernih Jedinica</a></li>
-            <li><a href="#saveti">Saveti i Trikovi</a></li>
-            <li><a href="#faq">Česta Pitanja</a></li>
+            <li><a href="/pekarska-platforma#pricing">Pretplate</a></li>
+            <li><a href="/pekarska-platforma#recepti">Recepti sa Detaljima</a></li>
+            <li><a href="/pekarska-platforma#konvertori">Konvertori Mernih Jedinica</a></li>
+            <li><a href="/pekarska-platforma#faq">Česta Pitanja</a></li>
           </ul>
         </div>
 
@@ -55,11 +55,11 @@ function Footer() {
         <div className="footer-credit">
           <p>&copy; {currentYear} Pekarska Platforma. Sva prava rezervisana. | Postale lepše sa pečenjem 🍞</p>
           <div className="footer-links-bottom">
-            <a href="#privatnost">Privatnost</a>
+            <a href="https://www.nikolaskakavac.com/privatnost" target="_blank" rel="noopener noreferrer">Privatnost</a>
             <span className="separator">•</span>
-            <a href="#uslovi">Uslovi Korišćenja</a>
+            <a href="https://www.nikolaskakavac.com/uslovi" target="_blank" rel="noopener noreferrer">Uslovi Korišćenja</a>
             <span className="separator">•</span>
-            <a href="#cookies">Kolačići</a>
+            <a href="https://www.nikolaskakavac.com/cookies" target="_blank" rel="noopener noreferrer">Kolačići</a>
           </div>
         </div>
       </div>

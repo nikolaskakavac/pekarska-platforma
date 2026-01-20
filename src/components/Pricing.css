@@ -49,10 +49,28 @@
   animation: slideDown 0.8s ease-out;
 }
 
-.pricing-card:hover {
+/* FREE PLAN - Gray hover */
+.pricing-card:nth-child(1):hover {
   transform: translateY(-10px);
-  border-color: rgba(255, 255, 255, 0.2);
-  background: linear-gradient(135deg, rgba(249, 115, 22, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+  border-color: rgba(100, 116, 139, 0.4);
+  background: linear-gradient(135deg, rgba(100, 116, 139, 0.1) 0%, rgba(148, 163, 184, 0.05) 100%);
+  box-shadow: 0 15px 40px rgba(100, 116, 139, 0.2);
+}
+
+/* PREMIUM PLAN - Orange hover */
+.pricing-card:nth-child(2):hover {
+  transform: translateY(-10px);
+  border-color: rgba(249, 115, 22, 0.4);
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.1) 0%, rgba(251, 146, 60, 0.05) 100%);
+  box-shadow: 0 15px 40px rgba(249, 115, 22, 0.25);
+}
+
+/* PRO PLAN - Purple hover */
+.pricing-card:nth-child(3):hover {
+  transform: translateY(-10px);
+  border-color: rgba(139, 92, 246, 0.5);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(167, 139, 250, 0.08) 100%);
+  box-shadow: 0 15px 40px rgba(139, 92, 246, 0.3);
 }
 
 .pricing-card.active {
@@ -62,7 +80,7 @@
 
 .pricing-card.featured {
   transform: scale(1.05);
-  box-shadow: 0 20px 60px rgba(139, 92, 246, 0.2);
+  box-shadow: 0 20px 60px rgba(139, 92, 246, 0.3);
 }
 
 .badge {
@@ -124,9 +142,22 @@
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
 }
 
-.plan-button:hover {
+/* FREE PLAN button hover */
+.pricing-card:nth-child(1) .plan-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.2);
+  box-shadow: 0 8px 20px rgba(100, 116, 139, 0.25);
+}
+
+/* PREMIUM PLAN button hover */
+.pricing-card:nth-child(2) .plan-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.25);
+}
+
+/* PRO PLAN button hover */
+.pricing-card:nth-child(3) .plan-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
 }
 
 .plan-button.active {
