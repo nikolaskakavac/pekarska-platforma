@@ -5,11 +5,18 @@ export const convertWeight = (amount, fromUnit, toUnit) => {
     'g-lb': amount * 0.00220462,
     'lb-g': amount / 0.00220462,
     'g-oz': amount * 0.035274,
-    'oz-g': amount / 0.035274
+    'oz-g': amount / 0.035274,
+    'kg-lb': amount * 2.20462,
+    'lb-kg': amount / 2.20462,
+    'kg-oz': amount * 35.274,
+    'oz-kg': amount / 35.274,
+    'lb-oz': amount * 16,
+    'oz-lb': amount / 16
   };
   
   const key = `${fromUnit}-${toUnit}`;
-  return conversions[key] ? conversions[key] : amount;
+  const result = conversions[key] || amount;
+  return parseFloat(result).toFixed(2);
 };
 
 export const convertVolume = (amount, fromUnit, toUnit) => {
@@ -19,11 +26,18 @@ export const convertVolume = (amount, fromUnit, toUnit) => {
     'ml-cup': amount * 0.00422675,
     'cup-ml': amount / 0.00422675,
     'tbsp-ml': amount * 14.7868,
-    'ml-tbsp': amount / 14.7868
+    'ml-tbsp': amount / 14.7868,
+    'l-cup': amount * 4.22675,
+    'cup-l': amount / 4.22675,
+    'l-tbsp': amount * 67.628,
+    'tbsp-l': amount / 67.628,
+    'cup-tbsp': amount * 16,
+    'tbsp-cup': amount / 16
   };
   
   const key = `${fromUnit}-${toUnit}`;
-  return conversions[key] ? conversions[key].toFixed(2) : amount;
+  const result = conversions[key] || amount;
+  return parseFloat(result).toFixed(2);
 };
 
 export const convertTemperature = (temp, fromUnit, toUnit) => {
