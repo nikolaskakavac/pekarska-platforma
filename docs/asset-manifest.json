@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/pekarska-platforma/static/css/main.a1bfbce9.css",
-    "main.js": "/pekarska-platforma/static/js/main.acb7b117.js",
+    "main.css": "/pekarska-platforma/static/css/main.3e062a6b.css",
+    "main.js": "/pekarska-platforma/static/js/main.34445051.js",
     "index.html": "/pekarska-platforma/index.html",
-    "main.a1bfbce9.css.map": "/pekarska-platforma/static/css/main.a1bfbce9.css.map",
-    "main.acb7b117.js.map": "/pekarska-platforma/static/js/main.acb7b117.js.map"
+    "main.3e062a6b.css.map": "/pekarska-platforma/static/css/main.3e062a6b.css.map",
+    "main.34445051.js.map": "/pekarska-platforma/static/js/main.34445051.js.map"
   },
   "entrypoints": [
-    "static/css/main.a1bfbce9.css",
-    "static/js/main.acb7b117.js"
+    "static/css/main.3e062a6b.css",
+    "static/js/main.34445051.js"
   ]
 }
