@@ -11,12 +11,79 @@
   align-items: center;
   justify-content: center;
   animation: slideDown 0.8s ease-out;
+  position: relative;
+}
+
+.video-player.video-locked {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.8) 100%);
 }
 
 .youtube-iframe {
   border-radius: 16px;
   width: 100%;
   height: 100%;
+}
+
+.lock-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(15, 23, 42, 0.8) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(2px);
+  border-radius: 16px;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.lock-content {
+  text-align: center;
+  z-index: 10;
+}
+
+.lock-icon {
+  font-size: 4rem;
+  margin-bottom: 15px;
+  animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.lock-overlay h3 {
+  color: #fbbf24;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 0.3px;
+}
+
+.lock-overlay p {
+  color: #cbd5e1;
+  font-size: 1rem;
+  margin-bottom: 25px;
+  max-width: 300px;
+}
+
+.unlock-btn {
+  background: linear-gradient(135deg, #f97316, #fb923c);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.unlock-btn:hover {
+  background: linear-gradient(135deg, #ea580c, #f97316);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
 }
 
 @keyframes slideDown {
@@ -27,6 +94,26 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -41,11 +128,32 @@
     margin-bottom: 1rem;
     aspect-ratio: 16 / 9;
   }
+
+  .lock-icon {
+    font-size: 3rem;
+  }
+
+  .lock-overlay h3 {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 480px) {
   .video-player {
     margin-bottom: 0.75rem;
     aspect-ratio: 16 / 9;
+  }
+
+  .lock-icon {
+    font-size: 2.5rem;
+  }
+
+  .lock-overlay h3 {
+    font-size: 1rem;
+  }
+
+  .unlock-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
 }

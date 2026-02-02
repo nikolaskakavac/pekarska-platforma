@@ -1,7 +1,32 @@
 import React from 'react';
 import './VideoPlayer.css';
+import { useAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 function VideoPlayer({ video }) {
+  const { subscriptionLevel, user } = useAuth();
+  const navigate = useNavigate();
+  
+  // Samo Basic i Premium mogu da gledaju videoe
+  const canWatchVideo = user && (subscriptionLevel === 'basic' || subscriptionLevel === 'premium');
+
+  if (!canWatchVideo) {
+    return (
+      <div className="video-player video-locked">
+        <div className="lock-overlay">
+          <div className="lock-content">
+            <div className="lock-icon">🔒</div>
+            <h3>Videoi su dostupni samo sa pretplatom</h3>
+            <p>Nabavite Basic ili Premium pretplatu da gledate sve video lekcije</p>
+            <button className="unlock-btn" onClick={() => window.scrollTo(0, 0)}>
+              Kupi pretplatu
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="video-player">
       <iframe
