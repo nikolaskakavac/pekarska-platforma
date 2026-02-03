@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0; url=/pekarska-platforma/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pekarska platforma</title>
+    <script>
+      (function () {
+        var l = window.location;
+        var repo = '/pekarska-platforma';
+        var path = l.pathname.replace(repo, '');
+        var newUrl = repo + '/?/' + path.replace(/^\//, '') + l.search + l.hash;
+        newUrl = newUrl.replace(/&/g, '~and~');
+        l.replace(newUrl);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
