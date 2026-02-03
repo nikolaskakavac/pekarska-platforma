@@ -181,4 +181,12 @@
   .user-info-bar {
     justify-content: center;
   }
+
+  .video-section {
+    order: 1;
+  }
+
+  .converter-wrapper {
+    order: 3;
+  }
 }

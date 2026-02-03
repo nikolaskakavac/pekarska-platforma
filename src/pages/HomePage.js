@@ -69,8 +69,6 @@ function HomePage() {
               <RecipeDisplay recipe={currentRecipe} />
             </ProtectedRecipe>
           )}
-
-          <ConversionTools />
         </div>
 
         <Playlist 
@@ -78,6 +76,10 @@ function HomePage() {
           currentVideo={currentVideo}
           onVideoSelect={handleVideoSelect}
         />
+
+        <div className="converter-wrapper">
+          <ConversionTools />
+        </div>
       </div>
 
       <LoginModal 

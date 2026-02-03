@@ -47,8 +47,8 @@
 }
 
 .lock-icon {
-  font-size: clamp(1.8rem, 4vw, 3.2rem);
-  margin-bottom: 15px;
+  font-size: clamp(1.3rem, 3vw, 3.2rem);
+  margin-bottom: 12px;
   animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 

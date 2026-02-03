@@ -5,8 +5,9 @@ import { useAuth } from '../context/AuthContext';
 function VideoPlayer({ video }) {
   const { subscriptionLevel, user } = useAuth();
   
-  // Samo Basic i Premium mogu da gledaju videoe
-  const canWatchVideo = user && (subscriptionLevel === 'basic' || subscriptionLevel === 'premium');
+  // Gostovi mogu da gledaju samo Beli Hleb video (courseId 1)
+  // Basic i Premium mogu da gledaju sve videoe
+  const canWatchVideo = video.id === 1 || (user && (subscriptionLevel === 'basic' || subscriptionLevel === 'premium'));
 
   if (!canWatchVideo) {
     return (
