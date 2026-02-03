@@ -71,11 +71,13 @@ function HomePage() {
           )}
         </div>
 
-        <Playlist 
-          courses={courses}
-          currentVideo={currentVideo}
-          onVideoSelect={handleVideoSelect}
-        />
+        <div className="playlist-wrapper">
+          <Playlist 
+            courses={courses}
+            currentVideo={currentVideo}
+            onVideoSelect={handleVideoSelect}
+          />
+        </div>
 
         <div className="converter-wrapper">
           <ConversionTools />
